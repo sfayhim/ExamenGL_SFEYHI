@@ -6,14 +6,16 @@ import java.time.temporal.Temporal;
 
 public class Termination {
 
+    private final LocalDate terminationDateInclusive;
+    private final long numberOfOccurrences;
+
     public LocalDate terminationDateInclusive() {
         // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
-    }
+        return terminationDateInclusive;    }
 
     public long numberOfOccurrences() {
         // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        return numberOfOccurrences;
     }
 
 
@@ -31,7 +33,8 @@ public class Termination {
      */
     public Termination(LocalDate start, ChronoUnit frequency, LocalDate terminationInclusive) {
         // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        this.terminationDateInclusive = terminationInclusive;
+        this.numberOfOccurrences = 1 + frequency.between(start, terminationInclusive);
     }
 
     /**
@@ -47,7 +50,8 @@ public class Termination {
      */
     public Termination(LocalDate start, ChronoUnit frequency, long numberOfOccurrences) {
         // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        this.numberOfOccurrences = numberOfOccurrences;
+        this.terminationDateInclusive = start.plus((numberOfOccurrences - 1), frequency);
     }
 
 }

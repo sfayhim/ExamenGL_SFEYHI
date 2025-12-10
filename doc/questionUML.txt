@@ -1,2 +1,23 @@
-Ecrire ici votre réponse à la question UML.
+MODELE 1 - Composition
 
+Avantages :
+- Plus flexible, permet d'ajouter facilement de nouvelles règles
+- Conforme aux spécifications (répétitions et terminaisons optionnelles)
+- Gère bien les cas complexes (par exemple : réunion hebdomadaire sauf jours fériés)
+
+Inconvénients :
+- Nécessite plus de code (Event + Repetition + Termination)
+- Navigation entre objets plus complexe
+
+
+MODELE 2 - Héritage
+
+Avantages :
+- Simple à comprendre (EventSimple, EventRepetitif...)
+- Moins d'objets à gérer
+- Code plus direct pour les cas basiques
+
+Inconvénients :
+- Rigide, créer une nouvelle classe pour chaque type de répétition
+- Difficile de faire évoluer un événement simple vers répétitif
+- Multiplication des sous-classes
