@@ -106,9 +106,6 @@ public class Event {
         ChronoUnit freq = repetition.getFrequency();
         long steps = freq.between(startDate, aDay);
 
-        if (steps < 0)
-            return false;
-
         if (!startDate.plus(steps, freq).equals(aDay))
             return false;
 
